@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="625.0" prefWidth="875.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AppointmentController">
+   <children>
+      <Pane layoutX="22.0" layoutY="21.0" prefHeight="583.0" prefWidth="832.0" style="-fx-border-color: gray; -fx-border-radius: 25;">
+         <children>
+            <TabPane layoutX="22.0" layoutY="59.0" prefHeight="457.0" prefWidth="789.0" style="-fx-border-color: gray;" tabClosingPolicy="UNAVAILABLE">
+              <tabs>
+                <Tab fx:id="viewAllTab" text="View All">
+                     <content>
+                        <TableView fx:id="appointmentsTblView" prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: lightblue;">
+                          <columns>
+                            <TableColumn fx:id="appointmentIDCol" prefWidth="52.0" text="Appt ID" />
+                            <TableColumn fx:id="titleCol" prefWidth="66.0" text="Title" />
+                              <TableColumn fx:id="descriptionCol" prefWidth="107.0" text="Description" />
+                              <TableColumn fx:id="locationCol" prefWidth="75.0" text="Location" />
+                              <TableColumn fx:id="contactCol" prefWidth="75.0" text="Contact" />
+                              <TableColumn fx:id="typeCol" prefWidth="51.0" text="Type" />
+                              <TableColumn fx:id="startTimeCol" prefWidth="99.0" text="Start" />
+                              <TableColumn fx:id="endTimeCol" prefWidth="116.0" text="End" />
+                              <TableColumn fx:id="customerIDCol" prefWidth="88.0" text="Customer ID" />
+                              <TableColumn fx:id="userIDCol" prefWidth="57.0" text="User ID" />
+                          </columns>
+                        </TableView>
+                     </content>
+                  </Tab>
+                  <Tab fx:id="currentMonthTab" text="Current Month View">
+                     <content>
+                        <TableView fx:id="monthTblView" prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: lightblue;">
+                           <columns>
+                              <TableColumn fx:id="monthApptIdCol" prefWidth="52.0" text="Appt ID" />
+                              <TableColumn fx:id="monthTitleCol" prefWidth="66.0" text="Title" />
+                              <TableColumn fx:id="monthDescCol" prefWidth="107.0" text="Description" />
+                              <TableColumn fx:id="monthLocCol" prefWidth="75.0" text="Location" />
+                              <TableColumn fx:id="monthContactCol" prefWidth="75.0" text="Contact" />
+                              <TableColumn fx:id="monthTypeCol" prefWidth="51.0" text="Type" />
+                              <TableColumn fx:id="monthStartCol" prefWidth="99.0" text="Start " />
+                              <TableColumn fx:id="monthEndCol" prefWidth="116.0" text="End " />
+                              <TableColumn fx:id="monthCustIdCol" prefWidth="88.0" text="Customer ID" />
+                              <TableColumn fx:id="monthUserIdCol" prefWidth="57.0" text="User ID" />
+                           </columns>
+                        </TableView>
+                     </content>
+                  </Tab>
+                  <Tab fx:id="currentWeekTab" text="Current Week View">
+                     <content>
+                        <TableView fx:id="weekTblView" prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: lightblue;">
+                           <columns>
+                              <TableColumn fx:id="weekApptIdCol" prefWidth="52.0" text="Appt ID" />
+                              <TableColumn fx:id="weekTitleCol" prefWidth="66.0" text="Title" />
+                              <TableColumn fx:id="weekDescCol" prefWidth="107.0" text="Description" />
+                              <TableColumn fx:id="weekLocCol" prefWidth="75.0" text="Location" />
+                              <TableColumn fx:id="weekContactCol" prefWidth="75.0" text="Contact" />
+                              <TableColumn fx:id="weekTypeCol" prefWidth="51.0" text="Type" />
+                              <TableColumn fx:id="weekStartCol" prefWidth="99.0" text="Start" />
+                              <TableColumn fx:id="weekEndCol" prefWidth="116.0" text="End" />
+                              <TableColumn fx:id="weekCustIdCol" prefWidth="88.0" text="Customer ID" />
+                              <TableColumn fx:id="weekUserIdCol" prefWidth="57.0" text="User ID" />
+                           </columns>
+                        </TableView>
+                     </content>
+                  </Tab>
+              </tabs>
+            </TabPane>
+            <Label alignment="CENTER" layoutX="294.0" layoutY="14.0" prefHeight="31.0" prefWidth="244.0" text="Appointments">
+               <font>
+                  <Font size="26.0" />
+               </font>
+            </Label>
+            <HBox layoutX="22.0" layoutY="516.0" prefHeight="58.0" prefWidth="767.0">
+               <children>
+                  <Button fx:id="addBtn" mnemonicParsing="false" onAction="#onActionAdd" prefHeight="32.0" prefWidth="89.0" text="Add">
+                     <HBox.margin>
+                        <Insets left="75.0" top="15.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="onActionUpdate" mnemonicParsing="false" onAction="#onActionUpdate" prefHeight="32.0" prefWidth="89.0" text="Update">
+                     <HBox.margin>
+                        <Insets left="50.0" top="15.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="deleteBtn" mnemonicParsing="false" onAction="#onActionDelete" prefHeight="32.0" prefWidth="89.0" text="Delete">
+                     <HBox.margin>
+                        <Insets left="50.0" top="15.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#onActionReturnToMain" prefHeight="32.0" prefWidth="134.0" text="Return to Main Menu">
+                     <HBox.margin>
+                        <Insets left="175.0" top="15.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

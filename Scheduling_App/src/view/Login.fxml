@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="625.0" prefWidth="875.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginController">
+   <children>
+      <Pane layoutX="21.0" layoutY="28.0" prefHeight="570.0" prefWidth="834.0" style="-fx-border-color: gray; -fx-border-radius: 30;">
+         <children>
+            <GridPane layoutX="172.0" layoutY="135.0" prefHeight="189.0" prefWidth="451.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="208.0" minWidth="10.0" prefWidth="81.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="243.0" minWidth="0.0" prefWidth="216.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label fx:id="userNameLbl" alignment="CENTER" prefHeight="53.0" prefWidth="179.0" text="Username:">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="passwordLbl" alignment="CENTER" prefHeight="53.0" prefWidth="179.0" text="Password:" GridPane.rowIndex="1">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="userNameTxt" prefHeight="29.0" prefWidth="243.0" GridPane.columnIndex="1" />
+                  <PasswordField fx:id="passwordTxt" prefHeight="29.0" prefWidth="243.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+               </children>
+            </GridPane>
+            <HBox layoutX="306.0" layoutY="344.0" prefHeight="135.0" prefWidth="329.0">
+               <children>
+                  <Button fx:id="submitBtn" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#onActionSubmit" prefHeight="39.0" prefWidth="123.0" text="Submit" />
+                  <Button fx:id="exitBtn" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#onActionExit" prefHeight="39.0" prefWidth="67.0" text="Exit">
+                     <HBox.margin>
+                        <Insets left="50.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+               <padding>
+                  <Insets left="75.0" top="25.0" />
+               </padding>
+            </HBox>
+            <GridPane layoutX="29.0" layoutY="486.0" prefHeight="30.0" prefWidth="387.0">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="144.0" minWidth="10.0" prefWidth="113.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="303.0" minWidth="10.0" prefWidth="274.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <Label fx:id="zoneIdLbl" prefHeight="20.0" prefWidth="287.0" text="ZoneId" GridPane.columnIndex="1">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="locationLbl" prefHeight="20.0" prefWidth="102.0" text="Location:">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+               </children>
+            </GridPane>
+            <Label fx:id="loginLbl" layoutX="360.0" layoutY="22.0" text="Login">
+               <font>
+                  <Font size="32.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
