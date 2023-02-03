@@ -1,9 +1,7 @@
 # Scheduling_App
-C195 Performance Assessment - Scheduling Application - Scheduler Pro
+Scheduling Application - Scheduler Pro
 
 - The purpose of this application is to provide a user-friendly scheduling application for a multi-national corporation.  The application pulls company data from a shared relational database.  The application provides the user with the ability to manage customers and appointments, as well as view specific report information.
-  
-- Created by Bradley Harper -- WGU Undergrad -- Computer Science student -- bharp47@student.wgu.edu
 
 - Application Version 5 
 
